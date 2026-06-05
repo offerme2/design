@@ -1342,7 +1342,7 @@ const PROMPT_TEMPLATES = {
     colorsShort: '深咖啡 #3D1E0E + 香檳金 #B8893E + 米白 #F5E6C8',
     style: '日系極致精緻、高級藥妝感、奢華中帶純粹科學感',
     typography: '中文：Yu Mincho Demibold / 思源宋體；英文：Cormorant Garamond italic',
-    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶；或做成全寬置底 bar'
+    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶'
   },
   'dermacept-stemlift': {
     brand: 'Dermacept Stem Lift（日系藥妝抗老緊緻系列，源自 Obagi X / Frame Lift；主打植萃緊緻、撐紋拉提、熟齡基礎護膚）',
@@ -1350,7 +1350,7 @@ const PROMPT_TEMPLATES = {
     colorsShort: '米金 #C9A876 + 柔光金 #E8D9B8 + 奶白',
     style: '日系熟齡精緻、溫潤輕奢；強調拉提、彈韌、底蘊；比維他命C 更輕、更柔、更有空氣感',
     typography: '中文：Yu Mincho Demibold / 思源宋體；英文：Cormorant Garamond italic（與母品牌一致）',
-    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶；或做成全寬置底 bar'
+    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶'
   },
   'dermacept-acid': {
     brand: 'Dermacept 五重酸（日系藥妝品牌，主打日常溫和煥膚精華，含植酸/葡萄糖酸/檸檬酸/乳酸/甘醇酸五種酸）',
@@ -1358,7 +1358,7 @@ const PROMPT_TEMPLATES = {
     colorsShort: '深海軍藍 #0A2A5E + 冰川灰藍 #A8C8DC + 純白',
     style: '日系藥妝專業、深沉而清醒；強調溫和、可信賴、像實體藥局櫃上會看到的權威感',
     typography: '中文：Yu Mincho Demibold / 思源宋體；英文：Cormorant Garamond italic（與母品牌一致）',
-    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶；或做成全寬置底 bar'
+    ctaStyle: '深咖啡 #3D1E0E 直角矩形按鈕（不要圓角藥丸，極小圓角即可）+ 白字 + 箭頭 ▶▶'
   }
 };
 
@@ -1452,7 +1452,7 @@ ${t.typography}
 標題粗體 + 細體混排，層次分明。
 
 【CTA 按鈕】
-${t.ctaStyle}
+${t.ctaStyle}${sizeKey === '1080x1080' ? '；方版可改為全寬置底 bar（貼齊畫面最底）' : ''}
 
 【其他要求】
 - 整體保留 15% 以上留白，避免擁擠
