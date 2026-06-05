@@ -1222,14 +1222,13 @@ function renderResults(items) {
       <div class="card-num"><span>${String(it.num).padStart(2, '0')}</span> / ${String(it.total).padStart(2, '0')}</div>
       <h3 class="card-headline">${escapeHtml(it.headline)}</h3>
       <p class="card-sub">${escapeHtml(it.sub)}</p>
-      ${it.callout ? `<p class="card-callout">● ${escapeHtml(it.callout)}</p>` : ''}
       <div class="card-meta">
         <span class="card-price">${highlightPrice(escapeHtml(it.price))}</span>
         <span class="card-cta">${escapeHtml(it.cta)}</span>
       </div>
       <div class="card-tags">${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="actions">
-        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}${it.callout ? '\n' + it.callout : ''}\n${it.price}\n${it.cta}`)}">複製全部</button>
+        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}\n${it.price}\n${it.cta}`)}">複製全部</button>
         <button class="action-btn" data-copy="${escAttr(it.headline)}">主標</button>
         <button class="action-btn" data-copy="${escAttr(it.sub)}">副標</button>
       </div>
@@ -1438,7 +1437,7 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
 
 【文案內容】
 主標：${sampleHeadline}
-副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
+副標：${sampleSub}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
 
 【品牌色彩】
 ${t.colors}
@@ -1476,7 +1475,7 @@ function buildPromptClaude(client, sizeKey, sampleIndex = 0) {
 尺寸：${sizeKey}
 文案：
 · 主標：${sampleHeadline}
-· 副標：${sampleSub}${sampleCallout ? '\n· 亮點：' + sampleCallout : ''}${samplePrice ? '\n· 價格：' + samplePrice : ''}${sampleCta ? '\n· CTA：' + sampleCta : ''}
+· 副標：${sampleSub}${samplePrice ? '\n· 價格：' + samplePrice : ''}${sampleCta ? '\n· CTA：' + sampleCta : ''}
 氛圍：我會另附參考圖（或寫一句，例如「夏天感」「實驗室感」）
 → 請依 Dermacept 品牌規範生圖（配色／版面／雷區你自己帶），用 Magnific gpt-2 出圖。`;
 }
