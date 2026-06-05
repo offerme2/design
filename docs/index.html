@@ -1220,7 +1220,6 @@ function renderResults(items) {
   root.innerHTML = items.map((it, idx) => `
     <article class="card" style="animation-delay: ${idx * 50}ms">
       <div class="card-num"><span>${String(it.num).padStart(2, '0')}</span> / ${String(it.total).padStart(2, '0')}</div>
-      ${it.tagline ? `<div class="card-tagline">${escapeHtml(it.tagline)}</div>` : ''}
       <h3 class="card-headline">${escapeHtml(it.headline)}</h3>
       <p class="card-sub">${escapeHtml(it.sub)}</p>
       ${it.callout ? `<p class="card-callout">● ${escapeHtml(it.callout)}</p>` : ''}
@@ -1230,7 +1229,7 @@ function renderResults(items) {
       </div>
       <div class="card-tags">${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="actions">
-        <button class="action-btn" data-copy="${escAttr(`${it.tagline ? it.tagline + '\n' : ''}${it.headline}\n${it.sub}${it.callout ? '\n' + it.callout : ''}\n${it.price}\n${it.cta}`)}">複製全部</button>
+        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}${it.callout ? '\n' + it.callout : ''}\n${it.price}\n${it.cta}`)}">複製全部</button>
         <button class="action-btn" data-copy="${escAttr(it.headline)}">主標</button>
         <button class="action-btn" data-copy="${escAttr(it.sub)}">副標</button>
       </div>
@@ -1437,7 +1436,7 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
 【尺寸規格】${s.label}
 【版型配置】${s.layoutLong}
 
-【文案內容】${sampleTagline ? '\n檔期標：' + sampleTagline : ''}
+【文案內容】
 主標：${sampleHeadline}
 副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
 
@@ -1452,7 +1451,7 @@ ${t.typography}
 標題粗體 + 細體混排，層次分明。
 
 【CTA 按鈕】
-${t.ctaStyle}${sizeKey === '1080x1080' ? '；方版可改為全寬置底 bar（貼齊畫面最底）' : ''}
+${t.ctaStyle}${sizeKey === '1080x1080' ? '；方版可改為約 95% 寬的置底 bar（貼齊最底、直角、用該產品線主色＋白字）' : ''}
 
 【其他要求】
 - 整體保留 15% 以上留白，避免擁擠
@@ -1475,7 +1474,7 @@ function buildPromptClaude(client, sizeKey, sampleIndex = 0) {
 產品線：${t.brand.split('（')[0]}
 主色：${t.colorsShort}
 尺寸：${sizeKey}
-文案：${sampleTagline ? '\n· 檔期標：' + sampleTagline : ''}
+文案：
 · 主標：${sampleHeadline}
 · 副標：${sampleSub}${sampleCallout ? '\n· 亮點：' + sampleCallout : ''}${samplePrice ? '\n· 價格：' + samplePrice : ''}${sampleCta ? '\n· CTA：' + sampleCta : ''}
 氛圍：我會另附參考圖（或寫一句，例如「夏天感」「實驗室感」）
