@@ -129,3 +129,21 @@ price_value,N4,"1,990",*,*,
 price_value,N5,"890",*,*,
 price_value,N5,"1,290",*,*,
 price_value,N5,"1,590",*,*,
+
+callout,benefit,線條 立即拉提,*,*,亮點
+
+callout,benefit,鬆弛 緊實升級,*,*,亮點
+
+callout,benefit,撐紋 有感,*,*,亮點
+
+callout,benefit,輪廓 更立體,*,*,亮點
+
+callout,benefit,雙下巴 緊收,*,*,亮點
+
+cta,*,首購免運 立即下單 ▶▶,*,*,長句促購
+
+cta,*,限時優惠 立即搶購 ▶▶,*,urgent,長句促購
+
+cta,*,把握檔期 立即體驗 ▶▶,*,*,長句促購
+
+cta,*,售完不補 馬上擁有 ▶▶,*,urgent,長句促購

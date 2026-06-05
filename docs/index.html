@@ -474,6 +474,21 @@ main {
   font-weight: 500;
 }
 
+.card-tagline {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--brand-blue);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.card-callout {
+  font-size: 13px;
+  color: var(--graphite);
+  margin: -6px 0 16px;
+  letter-spacing: -0.01em;
+}
+
 .card-headline {
   font-family: var(--font-display);
   font-size: 32px;
@@ -1087,6 +1102,8 @@ function generate(parts, scenario, tone, count, festival = '*') {
     priceValues[p.subcategory].push(p.value);
   });
 
+  const HSEP = ['　', '　', ' × ', '｜'];
+
   while (out.length < count && attempts < count * 12) {
     attempts++;
 
@@ -1095,8 +1112,10 @@ function generate(parts, scenario, tone, count, festival = '*') {
     if (!ctaPool.length) break;
     const cta = pick(ctaPool);
     const pattern = pricePool.length ? pick(pricePool) : { value: '' };
+    const calloutPool = filterParts(parts, 'callout', scenario, tone);
+    const callout = calloutPool.length ? pick(calloutPool).value : '';
 
-    let headline, sub, h4Sub = '', subSub = '';
+    let tagline = '', headline = '', sub = '', h4Sub = '', subSub = '';
 
     if (scenario === 'festival') {
       // ━━━━━━━━━ 節慶模式：整句主標 ━━━━━━━━━
@@ -1130,27 +1149,39 @@ function generate(parts, scenario, tone, count, festival = '*') {
       sub = subPick.value;
       subSub = subPick.subcategory;
 
-    } else {
-      // ━━━━━━━━━ 一般/獎項/新品模式：四字 + 前綴 ━━━━━━━━━
-      const headlinePool = filterParts(parts, 'headline_4', scenario, tone);
-      const subPool = filterParts(parts, 'sub', scenario, tone);
+    } else if (scenario === 'award') {
+      // ━━━━━━━━━ 獎項模式：獎項句即主標 ━━━━━━━━━
       const prefixPool = filterParts(parts, 'prefix', scenario, tone);
-      if (!headlinePool.length || !subPool.length) break;
-
-      const h4 = pick(headlinePool);
+      const subPool = filterParts(parts, 'sub', scenario, tone);
+      if (!prefixPool.length || !subPool.length) break;
+      headline = pick(prefixPool).value;
+      h4Sub = 'award';
       const subPick = pick(subPool);
-      const prefix = prefixPool.length ? pick(prefixPool) : null;
       sub = subPick.value;
-      h4Sub = h4.subcategory;
       subSub = subPick.subcategory;
 
-      if (scenario === 'award' && prefix) {
-        headline = prefix.value;
-      } else if (prefix) {
-        headline = prefix.value + h4.value;
-      } else {
-        headline = h4.value;
-      }
+    } else {
+      // ━━━━━━━━━ 一般/新品模式：檔期標 + 4+4 兩段主標 ━━━━━━━━━
+      const prefixPool = filterParts(parts, 'prefix', scenario, tone);
+      const h4Pool = filterParts(parts, 'headline_4', scenario, tone);
+      const subPool = filterParts(parts, 'sub', scenario, tone);
+      if (!h4Pool.length || !subPool.length) break;
+
+      // 前綴 → 獨立檔期標(不再黏在主標前)
+      tagline = prefixPool.length ? pick(prefixPool).value : '';
+
+      // 主標：抽兩個四字(優先 function/time),用空格或 × 串成兩段
+      const segPool = h4Pool.filter(p => p.subcategory === 'function' || p.subcategory === 'time');
+      const pool2 = segPool.length >= 2 ? segPool : h4Pool;
+      const a = pick(pool2);
+      let b = pick(pool2), bt = 0;
+      while (b.value === a.value && bt < 8 && pool2.length > 1) { b = pick(pool2); bt++; }
+      headline = (pool2.length > 1 && b.value !== a.value) ? (a.value + pick(HSEP) + b.value) : a.value;
+      h4Sub = a.subcategory;
+
+      const subPick = pick(subPool);
+      sub = subPick.value;
+      subSub = subPick.subcategory;
     }
 
     const price = pattern.value.replace(/\$?\\?\$?\{\{(N\d)\}\}/g, (_, k) => {
@@ -1158,14 +1189,14 @@ function generate(parts, scenario, tone, count, festival = '*') {
       return pool && pool.length ? pick(pool) : k;
     });
 
-    const key = headline + sub;
+    const key = tagline + headline + sub;
     if (seen.has(key)) continue;
     seen.add(key);
 
     out.push({
       num: out.length + 1,
       total: count,
-      headline, sub, price, cta: cta.value,
+      tagline, headline, sub, price, cta: cta.value, callout,
       tags: [scenario, h4Sub, subSub].filter(Boolean)
     });
   }
@@ -1188,15 +1219,17 @@ function renderResults(items) {
   root.innerHTML = items.map((it, idx) => `
     <article class="card" style="animation-delay: ${idx * 50}ms">
       <div class="card-num"><span>${String(it.num).padStart(2, '0')}</span> / ${String(it.total).padStart(2, '0')}</div>
+      ${it.tagline ? `<div class="card-tagline">${escapeHtml(it.tagline)}</div>` : ''}
       <h3 class="card-headline">${escapeHtml(it.headline)}</h3>
       <p class="card-sub">${escapeHtml(it.sub)}</p>
+      ${it.callout ? `<p class="card-callout">● ${escapeHtml(it.callout)}</p>` : ''}
       <div class="card-meta">
         <span class="card-price">${highlightPrice(escapeHtml(it.price))}</span>
         <span class="card-cta">${escapeHtml(it.cta)}</span>
       </div>
       <div class="card-tags">${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="actions">
-        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}\n${it.price}\n${it.cta}`)}">複製全部</button>
+        <button class="action-btn" data-copy="${escAttr(`${it.tagline ? it.tagline + '\n' : ''}${it.headline}\n${it.sub}${it.callout ? '\n' + it.callout : ''}\n${it.price}\n${it.cta}`)}">複製全部</button>
         <button class="action-btn" data-copy="${escAttr(it.headline)}">主標</button>
         <button class="action-btn" data-copy="${escAttr(it.sub)}">副標</button>
       </div>
@@ -1344,35 +1377,41 @@ const SIZE_SPECS = {
 function getSampleCopy(index = 0) {
   const root = document.querySelector('#results');
   const cards = root ? root.querySelectorAll('.card') : [];
+  let sampleTagline = '';
   let sampleHeadline = '【請先在上方產生範例，這裡會自動帶入主標】';
   let sampleSub = '【副標】';
+  let sampleCallout = '';
   let samplePrice = '';
   let sampleCta = '';
   const card = cards[index];
   if (card) {
+    const tag = card.querySelector('.card-tagline');
     const h = card.querySelector('.card-headline');
     const sub = card.querySelector('.card-sub');
+    const callout = card.querySelector('.card-callout');
     const price = card.querySelector('.card-price');
     const cta = card.querySelector('.card-cta');
+    if (tag) sampleTagline = tag.textContent.trim();
     if (h) sampleHeadline = h.textContent.trim();
     if (sub) sampleSub = sub.textContent.trim();
+    if (callout) sampleCallout = callout.textContent.replace(/^●\s*/, '').trim();
     if (price) samplePrice = price.textContent.trim();
     if (cta) sampleCta = cta.textContent.trim();
   }
-  return { sampleHeadline, sampleSub, samplePrice, sampleCta };
+  return { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta };
 }
 
 function buildPromptShort(client, sizeKey, sampleIndex = 0) {
   const t = PROMPT_TEMPLATES[client];
   const s = SIZE_SPECS[sizeKey];
   if (!t || !s) return '';
-  const { sampleHeadline, sampleSub, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
+  const { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
 
   return `請參考我上傳的「圖二（風格參考）」的氛圍，幫我做一張 ${sizeKey} 的 ${t.brand.split('（')[0]} 電商視覺。
 
-文案：
+文案：${sampleTagline ? '\n檔期標：' + sampleTagline : ''}
 主標：${sampleHeadline}
-副標：${sampleSub}${samplePrice ? '\n價格：' + samplePrice : ''}${sampleCta ? '\nCTA：' + sampleCta : ''}
+副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${samplePrice ? '\n價格：' + samplePrice : ''}${sampleCta ? '\nCTA：' + sampleCta : ''}
 
 風格：${t.style}
 配色：${t.colorsShort}
@@ -1385,7 +1424,7 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
   const t = PROMPT_TEMPLATES[client];
   const s = SIZE_SPECS[sizeKey];
   if (!t || !s) return '';
-  const { sampleHeadline, sampleSub, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
+  const { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
 
   return `請為「${t.brand}」設計一張 ${sizeKey} 的電商視覺。
 
@@ -1397,9 +1436,9 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
 【尺寸規格】${s.label}
 【版型配置】${s.layoutLong}
 
-【文案內容】
+【文案內容】${sampleTagline ? '\n檔期標：' + sampleTagline : ''}
 主標：${sampleHeadline}
-副標：${sampleSub}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
+副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
 
 【品牌色彩】
 ${t.colors}

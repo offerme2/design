@@ -127,3 +127,21 @@ price_value,N4,"1,290",*,*,
 price_value,N5,"690",*,*,
 price_value,N5,"890",*,*,
 price_value,N5,"1,099",*,*,
+
+callout,benefit,毛孔 明顯縮小,*,*,亮點
+
+callout,benefit,角質 立即代謝,*,*,亮點
+
+callout,benefit,底妝 更服貼,*,*,亮點
+
+callout,benefit,粗糙 一掃而空,*,*,亮點
+
+callout,benefit,粉刺 不再冒,*,*,亮點
+
+cta,*,首購免運 立即下單 ▶▶,*,*,長句促購
+
+cta,*,限時優惠 立即搶購 ▶▶,*,urgent,長句促購
+
+cta,*,把握檔期 立即體驗 ▶▶,*,*,長句促購
+
+cta,*,售完不補 馬上擁有 ▶▶,*,urgent,長句促購

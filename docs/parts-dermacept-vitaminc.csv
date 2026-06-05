@@ -200,3 +200,21 @@ price_value,N5,899,*,*,
 price_value,N5,"1,199",*,*,
 price_value,N5,"1,399",*,*,
 price_value,N5,"1,599",*,*,
+
+callout,benefit,淡化斑點 緊緻毛孔,*,*,亮點
+
+callout,benefit,暗沉 立即提亮,*,*,亮點
+
+callout,benefit,一滴 有感煥活,*,*,亮點
+
+callout,benefit,肌膚 透出光,*,*,亮點
+
+callout,benefit,細紋 漸淡,*,*,亮點
+
+cta,*,首購免運 立即下單 ▶▶,*,*,長句促購
+
+cta,*,限時優惠 立即搶購 ▶▶,*,urgent,長句促購
+
+cta,*,把握檔期 立即體驗 ▶▶,*,*,長句促購
+
+cta,*,售完不補 馬上擁有 ▶▶,*,urgent,長句促購
