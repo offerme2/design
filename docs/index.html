@@ -954,10 +954,10 @@ main {
         </div>
       </div>
       <div class="prompt-control-group">
-        <span class="prompt-control-label">版本</span>
+        <span class="prompt-control-label">給誰用</span>
         <div class="prompt-tab-row" id="prompt-mode-tabs">
-          <button class="prompt-tab active" data-mode="short">簡短版</button>
-          <button class="prompt-tab" data-mode="long">完整版</button>
+          <button class="prompt-tab active" data-mode="claude">給設計部 Claude</button>
+          <button class="prompt-tab" data-mode="chatgpt">貼到 ChatGPT</button>
         </div>
       </div>
     </div>
@@ -968,8 +968,9 @@ main {
     </div>
 
     <p class="prompt-hint">
-      💡 <strong>使用流程</strong>：① 上方產生範例 → ② 在「套用範例」選一組想用的 → ③ 找一張「想要這種感覺」的參考圖 → ④ 複製下方 prompt → ⑤ 開 ChatGPT，<strong>把參考圖（標為圖二）+ prompt 一起傳給 GPT</strong>。<br>
-      <strong>簡短版</strong>適合 GPT-4o / Gemini 即時對話用；<strong>完整版</strong>適合 Midjourney / 嚴謹工作流用。
+      💡 <strong>使用流程</strong>：① 上方產生範例 → ② 在「套用範例」選一組 → ③ 準備一張參考氛圍圖 → ④ 複製下方 prompt → ⑤ 連同參考圖一起傳出去。<br>
+      <strong>給設計部 Claude</strong>：精簡版（品牌色號＋產品名＋文案），貼回對話，Claude 會自動套品牌規範並用 Magnific 生圖。<br>
+      <strong>貼到 ChatGPT</strong>：完整自帶品牌規範的版本，適合直接在 ChatGPT／其他工具生圖。
     </p>
   </section>
 
@@ -1455,16 +1456,36 @@ ${t.ctaStyle}
 
 【其他要求】
 - 整體保留 15% 以上留白，避免擁擠
+- 主標排成一行（可兩段，中間用空格或 ×），不要堆成兩排
+- 分隔線只能是乾淨的細直線，不要捲花、星點、花角等小裝飾
+- 不要在四周加外框／外匡描邊，邊緣留白要透氣
+- 紅色只用在價格：主價紅色襯線大字、現省做小圓標
 - 主標必須清楚可讀，與背景對比度 ≥ 4.5:1
 - 不要使用過度卡通化或廉價感的元素
 - 產出風格定位：精品電商 / 日系專櫃藥妝海報感
 - 若參考圖二與品牌規範衝突，以「品牌規範」為主、「參考圖氛圍」為輔`;
 }
 
+function buildPromptClaude(client, sizeKey, sampleIndex = 0) {
+  const t = PROMPT_TEMPLATES[client];
+  const s = SIZE_SPECS[sizeKey];
+  if (!t || !s) return '';
+  const { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
+  return `【給設計部 Claude，會自動套 Dermacept 品牌 skill】
+產品線：${t.brand.split('（')[0]}
+主色：${t.colorsShort}
+尺寸：${sizeKey}
+文案：${sampleTagline ? '\n· 檔期標：' + sampleTagline : ''}
+· 主標：${sampleHeadline}
+· 副標：${sampleSub}${sampleCallout ? '\n· 亮點：' + sampleCallout : ''}${samplePrice ? '\n· 價格：' + samplePrice : ''}${sampleCta ? '\n· CTA：' + sampleCta : ''}
+氛圍：我會另附參考圖（或寫一句，例如「夏天感」「實驗室感」）
+→ 請依 Dermacept 品牌規範生圖（配色／版面／雷區你自己帶），用 Magnific gpt-2 出圖。`;
+}
+
 function buildPrompt(client, sizeKey, mode, sampleIndex = 0) {
-  return mode === 'long'
+  return mode === 'chatgpt'
     ? buildPromptLong(client, sizeKey, sampleIndex)
-    : buildPromptShort(client, sizeKey, sampleIndex);
+    : buildPromptClaude(client, sizeKey, sampleIndex);
 }
 
 const $promptBox = document.querySelector('#prompt-content');
@@ -1472,7 +1493,7 @@ const $promptCopy = document.querySelector('#prompt-copy');
 const $promptSizeTabs = document.querySelector('#prompt-size-tabs');
 const $promptModeTabs = document.querySelector('#prompt-mode-tabs');
 const $promptSamplePicker = document.querySelector('#prompt-sample-picker');
-let promptState = { size: '1080x1080', mode: 'short', sampleIndex: 0 };
+let promptState = { size: '1080x1080', mode: 'claude', sampleIndex: 0 };
 
 function renderPrompt() {
   const text = buildPrompt(state.client, promptState.size, promptState.mode, promptState.sampleIndex);
