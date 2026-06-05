@@ -529,6 +529,24 @@ main {
   margin-left: 2px;
 }
 
+.card-savebadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #D4A857;
+  color: #3D1E0E;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: -0.01em;
+  flex: none;
+}
+
 .card-cta {
   margin-left: auto;
   padding: 8px 18px;
@@ -1185,10 +1203,14 @@ function generate(parts, scenario, tone, count, festival = '*') {
       subSub = subPick.subcategory;
     }
 
-    const price = pattern.value.replace(/\$?\\?\$?\{\{(N\d)\}\}/g, (_, k) => {
+    const priceRaw = pattern.value.replace(/\$?\\?\$?\{\{(N\d)\}\}/g, (_, k) => {
       const pool = priceValues[k];
       return pool && pool.length ? pick(pool) : k;
     });
+    // 現省 拆出來做圓形標籤
+    let price = priceRaw, saving = '';
+    const sm = priceRaw.match(/現省\s*\$?[\d,]+/);
+    if (sm) { saving = sm[0]; price = priceRaw.replace(/[\s｜|]*現省\s*\$?[\d,]+/, '').trim(); }
 
     const key = tagline + headline + sub;
     if (seen.has(key)) continue;
@@ -1197,7 +1219,7 @@ function generate(parts, scenario, tone, count, festival = '*') {
     out.push({
       num: out.length + 1,
       total: count,
-      tagline, headline, sub, price, cta: cta.value, callout,
+      tagline, headline, sub, price, saving, cta: cta.value, callout,
       tags: [scenario, h4Sub, subSub].filter(Boolean)
     });
   }
@@ -1224,11 +1246,12 @@ function renderResults(items) {
       <p class="card-sub">${escapeHtml(it.sub)}</p>
       <div class="card-meta">
         <span class="card-price">${highlightPrice(escapeHtml(it.price))}</span>
+        ${it.saving ? `<span class="card-savebadge">${it.saving.split(/\s+/).map(s => escapeHtml(s)).join('<br>')}</span>` : ''}
         <span class="card-cta">${escapeHtml(it.cta)}</span>
       </div>
       <div class="card-tags">${it.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="actions">
-        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}\n${it.price}\n${it.cta}`)}">複製全部</button>
+        <button class="action-btn" data-copy="${escAttr(`${it.headline}\n${it.sub}\n${it.price}${it.saving ? '　' + it.saving : ''}\n${it.cta}`)}">複製全部</button>
         <button class="action-btn" data-copy="${escAttr(it.headline)}">主標</button>
         <button class="action-btn" data-copy="${escAttr(it.sub)}">副標</button>
       </div>
@@ -1394,7 +1417,9 @@ function getSampleCopy(index = 0) {
     if (h) sampleHeadline = h.textContent.trim();
     if (sub) sampleSub = sub.textContent.trim();
     if (callout) sampleCallout = callout.textContent.replace(/^●\s*/, '').trim();
+    const save = card.querySelector('.card-savebadge');
     if (price) samplePrice = price.textContent.trim();
+    if (save) samplePrice += (samplePrice ? '｜' : '') + save.textContent.replace(/\s+/g, ' ').trim();
     if (cta) sampleCta = cta.textContent.trim();
   }
   return { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta };
