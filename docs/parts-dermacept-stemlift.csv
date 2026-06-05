@@ -1,0 +1,131 @@
+category,subcategory,value,scenario,tone,note
+headline_4,function,緊緻拉提,*,*,Stem Lift主訴求
+headline_4,function,逆齡撐紋,*,*,抗老
+headline_4,function,深層撫紋,*,*,皺紋
+headline_4,function,豐盈彈嫩,*,*,彈潤訴求
+headline_4,function,緊實升級,*,*,緊實
+headline_4,function,撐紋拉提,*,*,撐+拉
+headline_4,function,飽滿緊緻,*,*,豐盈感
+headline_4,function,熟齡逆襲,*,*,熟齡訴求
+headline_4,function,筋膜煥新,*,*,筋膜
+headline_4,function,撐起肌齡,*,*,撐
+headline_4,function,角層築基,*,*,築基
+headline_4,function,潤膚緊緻,*,*,潤+緊
+headline_4,function,飽水Q彈,*,*,水感
+headline_4,function,膠原撐紋,*,*,膠原
+headline_4,function,熟齡基底,*,*,基底
+headline_4,function,毛孔縮緊,*,*,毛孔
+headline_4,function,雙下巴撫平,*,*,線條
+headline_4,function,彈韌新生,*,*,彈韌
+headline_4,time,即刻撐紋,*,*,瞬效
+headline_4,time,7日撫紋,*,*,週期
+headline_4,time,28日緊緻,*,*,週期
+headline_4,time,夜間修護,*,*,時段
+headline_4,time,晨間撐紋,*,*,時段
+headline_4,time,日日緊緻,*,*,日常
+headline_4,power,植萃緊緻力,award,*,植萃招牌
+headline_4,power,植萃黃金比,award,*,黃金比
+headline_4,power,胜肽科技,award,clinical,科技感
+headline_4,power,膠原科技,award,clinical,科技感
+headline_4,power,日本緊緻黑科技,award,*,日系科技
+headline_4,power,皮膚科推薦,award,clinical,專業背書
+headline_4,power,熟齡專科,award,clinical,專業
+headline_4,power,精萃濃縮,award,*,濃縮
+headline_4,emotional,撐起妳的好氣色,*,*,情感
+headline_4,emotional,撐住青春的線條,*,*,情感
+headline_4,emotional,讓臉再次飽滿起來,*,*,情感
+headline_4,emotional,鏡子裡的妳會更年輕,*,*,情感
+headline_4,emotional,給自己 不下垂的明天,*,*,情感
+headline_4,emotional,緊緻 是最溫柔的逆齡,*,*,情感
+sub,product,植萃抗老緊緻精華,*,*,標準介紹
+sub,product,日本緊緻系列 抗老基礎護膚,*,*,旗艦
+sub,product,植萃複合配方｜深層撐紋,*,clinical,成分
+sub,product,日本研發 熟齡專科緊緻配方,*,clinical,日系
+sub,product,百里香+十六夜薔薇+印楝葉萃取,*,clinical,成分列表
+sub,product,皮膚科共同研發 通過敏感肌測試,*,clinical,專業
+sub,product,化妝水+乳液 雙層撐紋,*,*,雙層
+sub,product,日本抗老精華 NO.1,award,*,獎項
+sub,product,日本回購率 NO.1 緊緻精華,award,*,口碑
+sub,product,連續3年抗老銷售冠軍,award,*,銷售
+sub,benefit,年度寵奢最高現省,festival,*,折扣
+sub,benefit,每日一抹 撐起肌齡,*,*,功效
+sub,benefit,熟齡保養 一瓶搞定,*,*,簡化
+sub,benefit,7日感受撐紋有感,*,*,週期
+sub,benefit,專業有感 立即驗證,*,clinical,專業
+sub,benefit,讓底妝服貼一整天,*,*,日常情境
+sub,benefit,日韓40+女生都在用,*,*,口碑
+sub,benefit,鏡子裡的妳 會自己驚艷,*,*,情感結果
+sub,benefit,讓臉部線條重新立體,*,*,線條
+sub,benefit,從角質層開始的緊緻,*,*,角質層
+sub,benefit,輕拍3秒 撐紋有感,*,*,使用情境
+sub,benefit,熟齡肌的最後一道防線,*,*,情感
+sub,combo,化妝水+乳液 黃金搭檔,*,clinical,組合
+sub,combo,Stem Lift 4件式抗老儀式,*,*,儀式感
+sub,combo,搭配維他命C 內外兼修,*,clinical,跨產品線
+sub,combo,日夜緊緻護膚組,*,*,組合
+prefix,general,限時,general,*,
+prefix,general,本週,general,*,
+prefix,general,春季,general,*,
+prefix,general,會員專屬,general,*,
+prefix,general,夏日,general,*,
+prefix,general,秋冬,general,*,
+prefix,general,夜殺,general,urgent,
+prefix,general,午間,general,urgent,
+prefix,general,週末,general,*,
+prefix,general,本檔,general,*,
+prefix,award,日本抗老精華第一,award,*,日系獎項
+prefix,award,COSME 殿堂入賞,award,*,
+prefix,award,COSME 大賞 1位,award,*,日系獎項
+prefix,award,VOCE 美容大賞,award,*,日系雜誌獎
+prefix,award,@cosme TOP10,award,*,口碑
+prefix,award,日本回購率 NO.1,award,*,口碑
+prefix,award,日本年度緊緻精華冠軍,award,*,
+prefix,award,日本熟齡保養首選,award,*,
+prefix,newproduct,全新登場,newproduct,*,
+prefix,newproduct,日本同步,newproduct,*,
+prefix,newproduct,日本直送,newproduct,*,
+prefix,newproduct,日本獨家,newproduct,*,
+prefix,newproduct,新品上市,newproduct,*,
+prefix,newproduct,話題新品,newproduct,*,
+prefix,newproduct,日本現正熱銷,newproduct,*,
+prefix,newproduct,NEO 進化升級,newproduct,*,
+price_pattern,*,年度寵奢最高現省 ${{N1}},*,luxe,奢華
+price_pattern,*,滿額折後 ${{N2}}｜現省 ${{N3}},*,*,標準
+price_pattern,*,首購限定 ${{N4}}起,*,urgent,首購
+price_pattern,*,加購價 ${{N5}},*,*,加購
+price_pattern,*,直降 ${{N3}}｜限量專屬,*,urgent,直降
+price_pattern,*,精華買1送1｜現省 ${{N1}},festival,*,買贈
+price_pattern,*,套組現省 ${{N1}}｜再贈日本旅行組,festival,luxe,套組+贈品
+price_pattern,*,入會即享 ${{N4}} 折扣,*,*,會員
+price_pattern,*,雙11限時 ${{N3}}｜售完不補,festival,urgent,雙11
+price_pattern,*,結帳享 ${{N4}} 即刻擁有,*,*,通用
+cta,*,立即下單 ▶▶,*,*,標準
+cta,*,立即體驗 ▶▶,*,clinical,試用
+cta,*,立即搶購 ▶▶,*,urgent,急迫
+cta,*,立即領取 ▶▶,*,*,贈品
+cta,*,馬上擁有 ▶▶,*,*,口語
+cta,*,搶在售完前 ▶▶,*,urgent,急迫
+cta,*,把握優惠 ▶▶,*,urgent,
+cta,*,加入購物車 ▶▶,*,*,標準
+cta,*,立即詢問 ▶▶,*,clinical,客服諮詢
+cta,*,給自己一瓶 ▶▶,*,*,情感
+cta,*,即刻啟動緊緻 ▶▶,*,clinical,專業版
+price_value,N1,"1,500",*,*,折扣金額池
+price_value,N1,"2,200",*,*,折扣金額池
+price_value,N1,"3,200",*,*,折扣金額池
+price_value,N1,"4,500",*,*,折扣金額池
+price_value,N2,"3,800",*,*,
+price_value,N2,"4,990",*,*,
+price_value,N2,"5,500",*,*,
+price_value,N2,"6,990",*,*,
+price_value,N3,"1,200",*,*,
+price_value,N3,"1,800",*,*,
+price_value,N3,"2,500",*,*,
+price_value,N3,"950",*,*,
+price_value,N4,"990",*,*,
+price_value,N4,"1,290",*,*,
+price_value,N4,"1,690",*,*,
+price_value,N4,"1,990",*,*,
+price_value,N5,"890",*,*,
+price_value,N5,"1,290",*,*,
+price_value,N5,"1,590",*,*,

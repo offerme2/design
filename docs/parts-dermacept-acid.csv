@@ -1,0 +1,129 @@
+category,subcategory,value,scenario,tone,note
+headline_4,function,溫和煥膚,*,*,五重酸主訴求
+headline_4,function,深層煥角,*,*,角質層
+headline_4,function,毛孔淨透,*,*,毛孔訴求
+headline_4,function,煥膚淨光,*,*,煥膚+光
+headline_4,function,日日煥膚,*,*,每日訴求
+headline_4,function,透膚淨潤,*,*,日系-透明感
+headline_4,function,平滑光感,*,*,日系-平滑
+headline_4,function,角質淨化,*,*,直接訴求
+headline_4,function,煥膚平衡,*,*,平衡
+headline_4,function,潤膚煥角,*,*,煥角混搭
+headline_4,function,絲滑亮肌,*,*,觸感
+headline_4,function,瞬透平滑,*,*,瞬效+觸感
+headline_4,function,粉刺退散,*,*,粉刺訴求
+headline_4,function,毛孔潔淨,*,*,毛孔訴求
+headline_4,function,煥膚露,*,*,日系一字
+headline_4,function,深層淨透,*,*,深層訴求
+headline_4,function,光潤透膚,*,*,光感
+headline_4,time,日日溫和,*,*,日常感
+headline_4,time,每日一拭,*,*,使用方式
+headline_4,time,7日轉肌,*,*,週期感
+headline_4,time,一拭煥肌,*,*,瞬效感
+headline_4,time,28日蛻變,*,*,週期感
+headline_4,time,夜間煥膚,*,*,時段感
+headline_4,time,晨間整肌,*,*,時段感
+headline_4,power,五重酸力,award,*,五重酸招牌
+headline_4,power,五酸黃金比,award,*,黃金比
+headline_4,power,複合酸力,award,*,科學感
+headline_4,power,酸類專家,award,clinical,專業感
+headline_4,power,溫和不刺激,award,clinical,日常專業
+headline_4,power,日本同款,award,*,日系
+headline_4,power,日本第一拭,award,*,日系
+headline_4,power,皮膚科推薦,award,clinical,專業背書
+headline_4,emotional,讓肌膚輕呼吸,*,*,情感訴求
+headline_4,emotional,從角質開始美,*,*,情感訴求
+headline_4,emotional,絲滑底妝感,*,*,日常情境
+headline_4,emotional,毛孔不再煩,*,*,情感
+headline_4,emotional,粉刺說再見,*,*,情感
+headline_4,emotional,透出妳的好膚質,*,*,情感
+sub,product,五重酸日常煥膚精華,*,*,標準產品介紹
+sub,product,五種酸黃金比例 日本獨家配方,*,*,旗艦版
+sub,product,植酸+葡萄糖酸+檸檬酸+乳酸+甘醇酸,*,clinical,成分列表
+sub,product,日本研發 每日可用的溫和煥膚,*,clinical,日系科學感
+sub,product,專為亞洲肌膚設計 5酸均衡配方,*,clinical,在地感
+sub,product,皮膚科共同研發 通過敏感肌測試,*,clinical,專業背書
+sub,product,化妝水前一拭 換來絲滑底妝,*,*,使用情境
+sub,product,日本煥膚精華 NO.1,award,*,獎項導向
+sub,product,日本回購率 NO.1 煥膚精華,award,*,口碑背書
+sub,product,連續3年銷售冠軍,award,*,銷售背書
+sub,benefit,年度寵奢最高現省,festival,*,折扣導向
+sub,benefit,每日一拭 換來絲滑透肌,*,*,功效導向
+sub,benefit,溫和煥膚 即刻有感,*,*,感受導向
+sub,benefit,專業有感 立即驗證,*,clinical,專業導向
+sub,benefit,7日換你絲滑光肌,*,*,週期導向
+sub,benefit,毛孔粉刺一次解決,*,*,結果導向
+sub,benefit,日韓女生的化妝水前一拭,*,*,口碑導向
+sub,benefit,讓底妝服貼一整天,*,*,日常情境
+sub,benefit,鏡子裡的妳 自己會驚艷,*,*,情感結果
+sub,benefit,讓粗糙說再見,*,clinical,結果導向
+sub,benefit,從角質層開始的好膚質,*,*,功效導向
+sub,benefit,告別暗沉粗糙肌,*,clinical,結果導向
+sub,combo,化妝水前的關鍵一步,*,clinical,使用情境
+sub,combo,搭配化妝水效果加乘,*,clinical,組合產品
+sub,combo,五重酸+純維他命C 黃金組合,*,clinical,跨產品線組合
+sub,combo,日夜溫和煥膚組,*,*,組合產品
+prefix,general,限時,general,*,
+prefix,general,本週,general,*,
+prefix,general,春季,general,*,
+prefix,general,會員專屬,general,*,
+prefix,general,夏日,general,*,
+prefix,general,秋冬換季,general,*,
+prefix,general,夜殺,general,urgent,夜間限定
+prefix,general,午間,general,urgent,午間限定
+prefix,general,週末,general,*,
+prefix,general,本檔,general,*,
+prefix,award,日本煥膚精華第一,award,*,日系獎項
+prefix,award,COSME 殿堂入賞,award,*,
+prefix,award,COSME 大賞 1位,award,*,日系獎項
+prefix,award,VOCE 美容大賞,award,*,日系雜誌獎
+prefix,award,@cosme TOP10,award,*,口碑榜
+prefix,award,日本回購率 NO.1,award,*,口碑
+prefix,award,日本年度煥膚精華冠軍,award,*,
+prefix,newproduct,全新登場,newproduct,*,
+prefix,newproduct,日本同步,newproduct,*,
+prefix,newproduct,日本直送,newproduct,*,
+prefix,newproduct,日本獨家,newproduct,*,
+prefix,newproduct,新品上市,newproduct,*,
+prefix,newproduct,話題新品,newproduct,*,
+prefix,newproduct,日本現正熱銷,newproduct,*,
+price_pattern,*,年度寵奢最高現省 \${{N1}},*,luxe,奢華語氣
+price_pattern,*,滿額折後 \${{N2}}｜現省 \${{N3}},*,*,標準折扣
+price_pattern,*,首購限定 \${{N4}}起,*,urgent,首購
+price_pattern,*,加購價 \${{N5}},*,*,加購
+price_pattern,*,直降 \${{N3}}｜限量專屬,*,urgent,直降
+price_pattern,*,精華買1送1｜現省 \${{N1}},festival,*,買贈
+price_pattern,*,套組現省 \${{N1}}｜再贈日本旅行組,festival,luxe,套組+贈品
+price_pattern,*,入會即享 \${{N4}} 折扣,*,*,會員
+price_pattern,*,雙11限時 \${{N3}}｜售完不補,festival,urgent,雙11
+price_pattern,*,結帳享 \${{N4}} 即刻擁有,*,*,通用
+cta,*,立即下單 ▶▶,*,*,標準
+cta,*,立即體驗 ▶▶,*,clinical,試用
+cta,*,立即搶購 ▶▶,*,urgent,急迫感
+cta,*,立即領取 ▶▶,*,*,贈品感
+cta,*,馬上擁有 ▶▶,*,*,口語版
+cta,*,搶在售完前 ▶▶,*,urgent,急迫感
+cta,*,把握優惠 ▶▶,*,urgent,
+cta,*,加入購物車 ▶▶,*,*,標準
+cta,*,立即詢問 ▶▶,*,clinical,客服諮詢
+cta,*,給自己一瓶 ▶▶,*,*,情感版
+cta,*,即刻啟動煥膚 ▶▶,*,clinical,專業版
+price_value,N1,"1,170",*,*,折扣金額池
+price_value,N1,"1,605",*,*,折扣金額池
+price_value,N1,"2,200",*,*,折扣金額池
+price_value,N1,"3,200",*,*,折扣金額池
+price_value,N2,"1,990",*,*,
+price_value,N2,"3,580",*,*,
+price_value,N2,"4,690",*,*,
+price_value,N2,"5,500",*,*,
+price_value,N3,"890",*,*,
+price_value,N3,"1,170",*,*,
+price_value,N3,"1,605",*,*,
+price_value,N3,"550",*,*,
+price_value,N4,"690",*,*,
+price_value,N4,"890",*,*,
+price_value,N4,"1,099",*,*,
+price_value,N4,"1,290",*,*,
+price_value,N5,"690",*,*,
+price_value,N5,"890",*,*,
+price_value,N5,"1,099",*,*,

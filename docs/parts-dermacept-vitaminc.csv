@@ -1,0 +1,202 @@
+category,subcategory,value,scenario,tone,note
+headline_4,function,極效煥膚,*,*,功能訴求-通用
+headline_4,function,極效修護,*,*,功能訴求-通用
+headline_4,function,極效煥肌,*,*,功能訴求-通用
+headline_4,function,深層煥活,*,*,功能訴求-通用
+headline_4,function,逆轉肌齡,*,*,時間訴求
+headline_4,function,煥活光彩,*,*,結果訴求
+headline_4,function,潤透淨白,*,*,日系-透明感
+headline_4,function,毛穴緊緻,*,*,日系-毛孔
+headline_4,function,艷光透肌,*,*,日系-光感
+headline_4,function,瞬透光感,*,*,日系-光感
+headline_4,function,深層滋潤,*,*,日系-保濕
+headline_4,function,潤澤水感,*,*,日系-水感
+headline_4,function,煥潤光肌,*,*,日系合成詞
+headline_4,function,透膚淨潤,*,*,日系合成詞
+headline_4,function,亮采淨白,*,*,亮白訴求
+headline_4,function,豐盈彈嫩,*,*,彈潤訴求
+headline_4,function,緊緻美肌,*,*,緊緻訴求
+headline_4,function,熟齡逆襲,*,*,熟齡訴求
+headline_4,time,一滴喚活,*,*,瞬效感
+headline_4,time,24H 修護,*,*,全天感
+headline_4,time,瞬效逆齡,*,*,瞬效感
+headline_4,time,即刻煥膚,*,*,瞬效感
+headline_4,time,7日有感,*,*,週期感
+headline_4,time,28日蛻變,*,*,週期感
+headline_4,time,每日一滴,*,*,日常感
+headline_4,time,夜間修護,*,*,時段感
+headline_4,time,晨光煥肌,*,*,時段感
+headline_4,time,即刻有感,*,clinical,瞬效感
+headline_4,power,極限美容,award,*,程度極致
+headline_4,power,高濃度純粹,award,*,程度極致
+headline_4,power,純粹維他命C,award,*,純粹訴求
+headline_4,power,NEO 進化,newproduct,*,新品專用
+headline_4,power,究極濃密,award,*,日系-究極
+headline_4,power,究極煥活,award,*,日系-究極
+headline_4,power,純度MAX,award,*,日系-純度
+headline_4,power,高純度結晶,award,clinical,科學感
+headline_4,power,專科級配方,*,clinical,專業感
+headline_4,power,研究所同款,*,clinical,專業感
+headline_4,power,皮膚科推薦,*,clinical,專業感
+headline_festival,母親節,媽媽值得被寵,festival,*,情感整句
+headline_festival,母親節,一年一度 獻給最美的她,festival,luxe,情感整句
+headline_festival,母親節,比起花 她想要更年輕的自己,festival,*,洞察整句
+headline_festival,母親節,妳的青春 媽媽都看見,festival,*,情感整句
+headline_festival,母親節,給她 不會枯萎的禮物,festival,*,巧思整句
+headline_festival,母親節,她說不用 但她值得擁有,festival,*,洞察整句
+headline_festival,母親節,媽媽的笑 比花更值得,festival,*,情感整句
+headline_festival,母親節,讓媽媽再次 為自己心動,festival,*,情感整句
+headline_festival,母親節,她寵愛全家 換我寵愛她,festival,*,情感整句
+headline_festival,母親節,從妳眼角 看見媽媽的時光,festival,*,洞察整句
+headline_festival,父親節,爸爸不説 但他也想被在乎,festival,*,情感整句
+headline_festival,父親節,他撐起家 換你撐起他,festival,*,情感整句
+headline_festival,父親節,給爸爸一份 不像領帶的禮物,festival,*,巧思整句
+headline_festival,父親節,爸爸老了 但他不必看起來那樣,festival,*,洞察整句
+headline_festival,父親節,他的歲月 值得一瓶好東西,festival,luxe,情感整句
+headline_festival,父親節,最沉默的愛 也想被聽見,festival,*,情感整句
+headline_festival,情人節,妳是他第一眼的光,festival,*,情感整句
+headline_festival,情人節,讓他再次 為妳怦然,festival,*,情感整句
+headline_festival,情人節,不只說我愛妳 給她真正想要的,festival,*,洞察整句
+headline_festival,情人節,她的美 值得最高規格,festival,luxe,奢華整句
+headline_festival,情人節,比鑽石更貼近她的肌膚,festival,luxe,奢華整句
+headline_festival,週年慶,一年最值得的一次,festival,luxe,週年慶
+headline_festival,週年慶,等了一整年 就為這幾天,festival,urgent,週年慶
+headline_festival,週年慶,妳的衣櫃可以等 妳的肌膚不行,festival,*,洞察整句
+headline_festival,週年慶,今年最後機會 別錯過自己,festival,urgent,週年慶
+headline_festival,週年慶,電商一年最大檔 不能錯過,festival,urgent,週年慶
+headline_festival,週年慶,給自己 一年一次的奢侈,festival,luxe,奢華整句
+headline_festival,雙11,一年最後一次 真正的便宜,festival,urgent,雙11
+headline_festival,雙11,雙11不只買 還要買對,festival,*,洞察整句
+headline_festival,雙11,便宜很多 但不便宜,festival,*,文字遊戲
+headline_festival,雙11,最值得放購物車的那一瓶,festival,*,雙11
+headline_festival,雙11,別再湊單 直接買對的,festival,*,洞察整句
+headline_festival,雙12,雙11沒搶到 雙12補上,festival,urgent,雙12
+headline_festival,雙12,年底最後 一次升級保養,festival,urgent,年底
+headline_festival,雙12,今年的最後一瓶 留給自己,festival,*,情感整句
+headline_festival,聖誕,聖誕禮物 從鏡子裡開始,festival,*,巧思整句
+headline_festival,聖誕,今年聖誕 給自己放閃,festival,*,情感整句
+headline_festival,聖誕,最美的聖誕禮 是更亮的妳,festival,*,情感整句
+headline_festival,聖誕,給她的聖誕 不只巧克力,festival,*,巧思整句
+headline_festival,新春,新年要新 從肌膚開始,festival,*,新春
+headline_festival,新春,過年回家 讓媽媽多看妳一眼,festival,*,情感整句
+headline_festival,新春,新的一年 新的容光,festival,*,新春
+headline_festival,生日月,妳值得 寵愛自己一整月,festival,*,生日
+headline_festival,生日月,生日這個月 對自己好一點,festival,*,生日
+headline_festival,生日月,這個月 妳是主角,festival,*,生日
+headline_festival,女神節,女神不需要被定義,festival,*,女神節
+headline_festival,女神節,做自己的女神,festival,*,女神節
+headline_festival,女神節,她的光 從來不靠別人,festival,*,女神節
+headline_festival,通用,寵愛自己 不需要理由,festival,*,通用節慶
+headline_festival,通用,她值得 比花更久的禮物,festival,*,通用節慶
+headline_festival,通用,有些禮物 妳該留給自己,festival,*,通用節慶
+sub,product,高濃度純維他命C精華,*,*,標準產品介紹
+sub,product,極限美容液 25% 純維他命C,*,*,旗艦版
+sub,product,一滴逆轉肌齡 煥活年輕光彩,*,*,功效導向
+sub,product,NO.1 純維他命C精華,award,*,獎項導向
+sub,product,日本研發 純粹高濃度配方,*,clinical,日系科學感
+sub,product,專為亞洲肌膚研發,*,clinical,在地感
+sub,product,皮膚科共同研發,*,clinical,專業背書
+sub,product,藥妝級維他命C專科,*,clinical,藥妝感
+sub,product,日本COSME 殿堂第一,award,*,獎項背書
+sub,product,日本回購率 NO.1 精華液,award,*,口碑背書
+sub,product,連續3年銷售冠軍,award,*,銷售背書
+sub,benefit,年度寵奢最高現省,festival,*,折扣導向
+sub,benefit,一滴喚活逆轉肌齡,*,*,功效導向
+sub,benefit,極致煥膚 純粹有感,*,*,感受導向
+sub,benefit,專業有感 立即驗證,*,clinical,專業導向
+sub,benefit,7日肌齡逆轉計畫,*,*,週期導向
+sub,benefit,熟齡保養 一瓶搞定,*,*,簡化訴求
+sub,benefit,日韓女生都在用,*,*,口碑導向
+sub,benefit,黑斑暗沈一掃而光,*,clinical,結果導向
+sub,benefit,讓妳忘了年紀的存在,*,*,情感結果
+sub,benefit,鏡子裡的妳會驚艷,*,*,情感結果
+sub,benefit,讓底妝服貼一整天,*,*,日常情境
+sub,benefit,彷彿肌膚會發光,*,*,光感結果
+sub,combo,早C晚A 黃金搭檔,*,clinical,組合產品
+sub,combo,C25旗艦+C5眼周組,*,*,組合產品
+sub,combo,純維他命C 全系列,*,*,系列產品
+sub,combo,日夜雙效修護組,*,*,組合產品
+sub,festival_gift,母親節獻禮 一瓶寫給她的詩,festival,luxe,母親節副標
+sub,festival_gift,獻給她最值得的那一份,festival,luxe,通用節慶副標
+sub,festival_gift,把日本最好的 帶回來給她,festival,*,通用節慶副標
+sub,festival_gift,妳的心意 化作她的容光,festival,*,通用節慶副標
+sub,festival_gift,陪她重新 認識自己的美,festival,*,通用節慶副標
+prefix,general,限時,general,*,
+prefix,general,本週,general,*,
+prefix,general,春季,general,*,
+prefix,general,會員專屬,general,*,
+prefix,general,夏日,general,*,
+prefix,general,秋冬,general,*,
+prefix,general,夜殺,general,urgent,夜間限定
+prefix,general,午間,general,urgent,午間限定
+prefix,general,週末,general,*,
+prefix,general,本檔,general,*,
+prefix,award,日本美容大賞 134 冠王＊,award,*,需加註腳
+prefix,award,COSME 殿堂入賞,award,*,
+prefix,award,NO.1 純維他命C精華,award,*,
+prefix,award,日本年度精華液冠軍,award,*,
+prefix,award,COSME 大賞 1位,award,*,日系獎項
+prefix,award,VOCE 美容大賞,award,*,日系雜誌獎
+prefix,award,@cosme TOP10,award,*,口碑榜
+prefix,award,日本回購率 NO.1,award,*,口碑
+prefix,newproduct,全新登場,newproduct,*,
+prefix,newproduct,NEO 升級,newproduct,*,
+prefix,newproduct,首度導入,newproduct,*,
+prefix,newproduct,日本同步,newproduct,*,
+prefix,newproduct,日本直送,newproduct,*,
+prefix,newproduct,日本獨家,newproduct,*,
+prefix,newproduct,新品上市,newproduct,*,
+prefix,newproduct,話題新品,newproduct,*,
+prefix,newproduct,日本現正熱銷,newproduct,*,
+price_pattern,*,年度寵奢最高現省 \${{N1}},*,luxe,奢華語氣
+price_pattern,*,滿額折後 \${{N2}}｜現省 \${{N3}},*,*,標準折扣
+price_pattern,*,首購限定 \${{N4}}起,*,urgent,首購
+price_pattern,*,C25 加購價 \${{N5}},*,*,加購
+price_pattern,*,直降 \${{N3}}｜限量專屬,*,urgent,直降
+price_pattern,*,精華液買1送1｜現省 \${{N1}},festival,*,買贈
+price_pattern,*,套組現省 \${{N1}}｜再贈日本旅行組,festival,luxe,套組+贈品
+price_pattern,*,入會即享 \${{N4}} 折扣,*,*,會員
+price_pattern,*,週年慶限定 \${{N2}}起,festival,luxe,週年慶
+price_pattern,*,母親節獻禮 直降 \${{N1}},festival,luxe,母親節
+price_pattern,*,雙11限時 \${{N3}}｜售完不補,festival,urgent,雙11
+price_pattern,*,結帳享 \${{N4}} 即刻擁有,*,*,通用
+cta,*,立即下單 ▶▶,*,*,標準
+cta,*,立即體驗 ▶▶,*,clinical,試用
+cta,*,立即搶購 ▶▶,*,urgent,急迫感
+cta,*,立即領取 ▶▶,*,*,贈品感
+cta,*,馬上擁有 ▶▶,*,*,口語版
+cta,*,搶在售完前 ▶▶,*,urgent,急迫感
+cta,*,把握優惠 ▶▶,*,urgent,
+cta,*,加入購物車 ▶▶,*,*,標準
+cta,*,立即詢問 ▶▶,*,clinical,客服諮詢
+cta,*,把美麗帶回家 ▶▶,festival,luxe,情感版
+cta,*,給自己一瓶 ▶▶,*,*,情感版
+cta,*,即刻啟動煥膚 ▶▶,*,clinical,專業版
+price_value,N1,"1,170",*,*,折扣金額池
+price_value,N1,"1,805",*,*,折扣金額池
+price_value,N1,"2,580",*,*,折扣金額池
+price_value,N1,"3,580",*,*,折扣金額池
+price_value,N1,"4,200",*,*,折扣金額池
+price_value,N1,"5,800",*,*,折扣金額池
+price_value,N2,"4,630",*,*,
+price_value,N2,"8,245",*,*,
+price_value,N2,"6,890",*,*,
+price_value,N2,"3,990",*,*,
+price_value,N2,"5,580",*,*,
+price_value,N2,"7,200",*,*,
+price_value,N3,"1,170",*,*,
+price_value,N3,"1,805",*,*,
+price_value,N3,950,*,*,
+price_value,N3,"1,400",*,*,
+price_value,N3,"2,100",*,*,
+price_value,N3,750,*,*,
+price_value,N4,899,*,*,
+price_value,N4,"1,199",*,*,
+price_value,N4,"1,499",*,*,
+price_value,N4,"1,299",*,*,
+price_value,N4,"1,699",*,*,
+price_value,N4,"1,990",*,*,
+price_value,N5,899,*,*,
+price_value,N5,"1,199",*,*,
+price_value,N5,"1,399",*,*,
+price_value,N5,"1,599",*,*,
