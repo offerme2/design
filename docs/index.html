@@ -1430,12 +1430,16 @@ function buildPromptShort(client, sizeKey, sampleIndex = 0) {
   const s = SIZE_SPECS[sizeKey];
   if (!t || !s) return '';
   const { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
+  // CTA = 一句促購整句（含價格），放在置底 bar；價格不另外獨立成行
+  const ctaSentence = samplePrice
+    ? (samplePrice + (/[▶»]/.test(samplePrice) ? '' : ' ▶▶'))
+    : sampleCta;
 
   return `請參考我上傳的「圖二（風格參考）」的氛圍，幫我做一張 ${sizeKey} 的 ${t.brand.split('（')[0]} 電商視覺。
 
 文案：${sampleTagline ? '\n檔期標：' + sampleTagline : ''}
 主標：${sampleHeadline}
-副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${samplePrice ? '\n價格：' + samplePrice : ''}${sampleCta ? '\nCTA：' + sampleCta : ''}
+副標：${sampleSub}${sampleCallout ? '\n亮點：' + sampleCallout : ''}${ctaSentence ? '\nCTA（一句促購，置底 bar 內含價格）：' + ctaSentence : ''}
 
 風格：${t.style}
 配色：${t.colorsShort}
@@ -1449,6 +1453,10 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
   const s = SIZE_SPECS[sizeKey];
   if (!t || !s) return '';
   const { sampleTagline, sampleHeadline, sampleSub, sampleCallout, samplePrice, sampleCta } = getSampleCopy(sampleIndex);
+  // CTA = 一句促購整句（含價格），放在置底 bar；價格不另外獨立成行
+  const ctaSentence = samplePrice
+    ? (samplePrice + (/[▶»]/.test(samplePrice) ? '' : ' ▶▶'))
+    : sampleCta;
 
   return `請為「${t.brand}」設計一張 ${sizeKey} 的電商視覺。
 
@@ -1462,7 +1470,7 @@ function buildPromptLong(client, sizeKey, sampleIndex = 0) {
 
 【文案內容】
 主標：${sampleHeadline}
-副標：${sampleSub}${samplePrice ? '\n價格資訊：' + samplePrice : ''}${sampleCta ? '\nCTA 按鈕：' + sampleCta : ''}
+副標：${sampleSub}${ctaSentence ? '\nCTA（一句促購整句，置底 bar，內含價格）：' + ctaSentence : ''}
 
 【品牌色彩】
 ${t.colors}
@@ -1475,14 +1483,15 @@ ${t.typography}
 標題粗體 + 細體混排，層次分明。
 
 【CTA 按鈕】
-${t.ctaStyle}${sizeKey === '1080x1080' ? '；方版可改為約 95% 寬的置底 bar（貼齊最底、直角、用該產品線主色＋白字）' : ''}
+CTA 做成「一句促購整句」並包含價格（例：結帳享 $1,099 即刻擁有 ▶▶），結尾加箭頭 ▶▶；不要另外獨立放一行價格，價格只出現在這句 CTA 裡。
+${sizeKey === '1080x1080' ? '方版：用約 95% 寬的置底 bar（貼齊最底、直角、用該產品線主色＋白字；五重酸＝深海軍藍 #0A2A5E、維他命C＝深咖啡 #3D1E0E、Stem Lift＝米金 #C9A876）。' : t.ctaStyle + '（直式／橫式用直角按鈕，不做置底 bar）'}
 
 【其他要求】
 - 整體保留 15% 以上留白，避免擁擠
 - 主標排成一行（可兩段，中間用空格或 ×），不要堆成兩排
 - 分隔線只能是乾淨的細直線，不要捲花、星點、花角等小裝飾
 - 不要在四周加外框／外匡描邊，邊緣留白要透氣
-- 紅色只用在價格：主價紅色襯線大字、現省做小圓標
+- 價格放在置底 bar 內時，用白色粗體放大（深底配紅字不易讀）；價格若獨立放在淺色區才用紅色襯線大字。現省一律做小圓標。
 - 主標必須清楚可讀，與背景對比度 ≥ 4.5:1
 - 不要使用過度卡通化或廉價感的元素
 - 產出風格定位：精品電商 / 日系專櫃藥妝海報感
