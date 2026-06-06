@@ -108,15 +108,12 @@ function scaleToCoverAndCenter(layer, W, H) {
     moveLayerTo(layer, (W - nw) / 2, (H - nh) / 2);
 }
 
-// 裝飾/角色：等比縮放，長邊對齊畫布長邊
+// 裝飾/角色：等比縮放，對齊畫布寬度
 function scaleToLongestEdge(layer, W, H) {
     var b = getBounds(layer);
     var lw = b.right  - b.left;
-    var lh = b.bottom - b.top;
-    if (lw === 0 || lh === 0) return;
+    if (lw === 0) return;
 
-    var canvasLongest = Math.max(W, H);
-    var layerLongest  = Math.max(lw, lh);
-    var scale = (canvasLongest / layerLongest) * 100;
+    var scale = (W / lw) * 100;
     layer.resize(scale, scale, AnchorPosition.MIDDLECENTER);
 }
