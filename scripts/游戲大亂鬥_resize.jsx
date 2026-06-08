@@ -45,15 +45,20 @@ for (var i = 0; i < sizes.length; i++) {
     createArtboard(spec.name, offsetX, offsetY, W, H);
     var artboard = newDoc.layers[0]; // 剛建的在最上層
 
-    // 把母版所有圖層複製進去
+    // 先複製到文件層級，再移進工作區域（PS 不允許直接複製群組到工作區域）
     app.activeDocument = sourceDoc;
     var sourceLayers = sourceDoc.layers;
+    var copiedLayers = [];
     for (var j = sourceLayers.length - 1; j >= 0; j--) {
-        sourceLayers[j].duplicate(artboard, ElementPlacement.PLACEATEND);
+        var copied = sourceLayers[j].duplicate(newDoc, ElementPlacement.PLACEATEND);
+        copiedLayers.push(copied);
     }
 
-    // 切回新文件，對工作區域內圖層做排版
+    // 切回新文件，把複製好的圖層移進工作區域
     app.activeDocument = newDoc;
+    for (var j = 0; j < copiedLayers.length; j++) {
+        copiedLayers[j].move(artboard, ElementPlacement.PLACEATEND);
+    }
     var abLayers = artboard.layers;
     for (var k = 0; k < abLayers.length; k++) {
         transformLayer(abLayers[k], W, H, offsetX, offsetY);
