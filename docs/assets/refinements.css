@@ -1,0 +1,24 @@
+/* Responsive map labels and database controls. */
+.marker-leader{fill:none;stroke:#7898a7;stroke-width:1;opacity:.65;pointer-events:none}
+.source-link{display:inline-flex;min-height:44px;align-items:center;padding:8px 0;color:var(--lime)}
+.filters{grid-template-columns:1.5fr repeat(4,minmax(0,1fr)) auto}
+.group-list{display:grid;gap:8px;margin-top:20px}
+.group-item{display:grid;grid-template-columns:1fr auto;gap:6px;text-align:left;padding:14px}
+.group-item small{grid-column:1/-1;color:var(--muted);font-size:12px}
+.group-item span{font-size:14px}
+.city-marker.selected .marker-leader{stroke:var(--red)}
+@media(max-width:1100px) and (min-width:741px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:740px){
+.city-marker text{font-size:22px;stroke-width:6px}
+.city-marker.spot text{font-size:21px}
+.city-marker .marker-leader{stroke-width:1.6}
+.map-wrap{inset:195px -90px 60px -175px}
+.filters{grid-template-columns:1fr 1fr}
+.filters label{font-size:14px}
+.filters input,.filters select{font-size:16px}
+.resource small{font-size:12px}
+.resource p{font-size:12px}
+.panel dl>div{font-size:14px;grid-template-columns:92px 1fr}
+.panel .eyebrow,.photo-caption{font-size:12px}
+.panel summary{min-height:44px;display:flex;align-items:center}
+}
